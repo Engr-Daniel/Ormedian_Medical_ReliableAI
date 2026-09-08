@@ -1,0 +1,4 @@
+# Python 3.11 is the project default.
+# No third-party runtime dependencies are needed for the Phase 0 scaffold.
+# Add justified, reproducibly constrained dependencies when a lab needs them.
+# Do not add PyTorch or other ML frameworks during setup without a concrete need.

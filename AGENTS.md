@@ -960,7 +960,7 @@ Phase 0 remains Week 1 of the 24-week curriculum: one structured foundation week
 | Day 6 | P0-U06 Literature & Paper Reading Workflow | Paper-reading template + literature map |
 | Day 7 | P0-U07 Scientific Communication & Phase Assessment | Mini presentation + Phase 0 assessment |
 
-Prerequisites and assessment pass criteria are curriculum-content decisions to define during Phase 0 design. Detailed Weeks 2–24 allocation is deferred until Phase 0 is finished and Phase 1 planning begins; these pending content decisions are not repository-architecture defects.
+Phase 0 prerequisites, expected deliverables, and competency-based completion criteria are documented in the [Phase 0 guide](curriculum/phase-0-researcher-setup/README.md). Detailed Weeks 2–24 allocation is deferred until Phase 0 is finished and Phase 1 planning begins; these pending content decisions are not repository-architecture defects.
 
 Use the appropriate templates from Section 3. Not every unit needs an elaborate coding experiment; keep the foundation week focused and reusable by future GTs.
 

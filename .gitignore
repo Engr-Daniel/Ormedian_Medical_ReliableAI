@@ -1,0 +1,75 @@
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Jupyter runtime checkpoints (not notebooks)
+.ipynb_checkpoints/
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system local files
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Model weights and serialized model artifacts
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+
+# Large arrays, medical images, and archives
+*.npy
+*.npz
+*.dcm
+*.nii
+*.nii.gz
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Dedicated local download/export locations and tool output
+/downloads/
+/exports/
+/tmp/
+node_modules/
+wandb/
+events.out.tfevents.*
+
+# Research-paper PDFs; small teaching/figure PDFs elsewhere remain eligible
+/resources/literature/**/*.pdf
+
+# Keep curriculum, research notes, CSV/JSON execution records,
+# lightweight results, and ordinary figures eligible for Git.

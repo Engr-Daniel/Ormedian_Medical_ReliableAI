@@ -1,0 +1,3 @@
+# No third-party development dependencies are needed for the scaffold.
+# Add Jupyter tooling when notebook work begins and test tools when code needs them.
+# VS Code and the Marp extension are editor tools, not pip requirements here.
