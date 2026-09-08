@@ -1,0 +1,4 @@
+interface:
+  display_name: "OR-MEDIAN PR Reviewer"
+  short_description: "Mentoring reviews for research and curriculum PRs"
+  default_prompt: "Use $ormedian-pr-review to review this PR with prioritized findings, explanations, diagnostic steps, and a merge-readiness recommendation."
