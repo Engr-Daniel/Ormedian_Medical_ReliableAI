@@ -6,7 +6,7 @@
 
 Establish a professional, reproducible research environment and learn to work like a computational researcher before studying PyTorch. By the end of Week 1, demonstrate a documented workflow that connects a question, practical work, evidence, interpretation, and the next investigation.
 
-This guide defines the foundation week. Lessons, slide decks, executable labs, and assessment tasks are planned, not yet available. No P0-U01 lesson is included here.
+This guide defines the foundation week. P0-U01 is now active. Lecture notes are stored separately from curriculum navigation, labs are guided practice, slides are trainee teach-back artifacts, and assessments are independent competency checks.
 
 ## Prerequisites
 
@@ -77,12 +77,18 @@ Replace **Planned** with relative links as artifacts are created. It means unava
 
 | Unit ID | Curriculum | Slides | Lab | Assessment |
 | --- | --- | --- | --- | --- |
-| P0-U01 | Planned | Planned | As needed | Planned |
+| P0-U01 | [Unit guide](P0-U01.md) | [Teach-back area](../../slides/phase-0/) | [Practice area](../../labs/phase-0/) | [P0-A01](../../assessments/phase-0/P0-A01_Assessment_Researcher_Mindset_and_Scientific_Workflow.docx) |
 | P0-U02 | Planned | Planned | Planned | Planned |
 | P0-U03 | Planned | Planned | Planned | Planned |
 | P0-U04 | Planned | Planned | Planned | Planned |
 | P0-U05 | Planned | Planned | Planned | Planned |
 | P0-U06 | Planned | Planned | As needed | Planned |
 | P0-U07 | Planned | Planned | As needed | Planned (`P0-A01`) |
+
+### Lecture notes
+
+Durable teaching notes live under `lecture-notes/phase-0/`, separate from the curriculum guide. For P0-U01, see:
+
+`../../lecture-notes/phase-0/P0-U01_Lecture_Notes_Researcher_Mindset_and_Scientific_Workflow.docx`
 
 Use the same `P0-Uxx` prefix in related filenames. Curriculum files belong here; slide, lab, and assessment artifacts belong under their respective `phase-0/` directories. Assessment documents carry their own assessment IDs and related unit IDs. Retain the flat artifact-type organization defined in [AGENTS.md](../../AGENTS.md).

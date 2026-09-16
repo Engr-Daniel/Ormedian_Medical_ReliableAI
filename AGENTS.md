@@ -1004,6 +1004,24 @@ If the answer to a relevant question is no, the task is not done.
 
 ---
 
+
+## Lecture Notes, Labs, Slides, and Assessment Submissions
+
+Use these boundaries throughout the training program:
+
+- `lecture-notes/` contains the durable teaching material produced for each major unit.
+- `curriculum/` defines sequence, objectives, pacing, navigation, and completion expectations; it should not duplicate the full lecture note.
+- `labs/` contains guided practice completed by the trainee before assessment.
+- `slides/` contains trainee teach-back presentations demonstrating their understanding; slides should not merely reproduce lecture notes.
+- `assessments/` contains reusable competency checks.
+- `assessments/<phase>/submissions/` may contain completed trainee responses when repository privacy/ownership policy permits.
+- `research-notes/` contains reflection, reasoning, reading notes, and the trainee's research journal.
+
+For a typical unit, use:
+
+Lecture note → recommended reading → lab → trainee teach-back slides → independent assessment → mentor review → reflection.
+
+
 ## Guiding Principle
 
 > **We are not training someone merely to run models. We are training researchers to understand, investigate, reproduce, critique, and improve reliable AI systems for medical imaging.**
