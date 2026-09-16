@@ -107,3 +107,11 @@ Append concise entries with this structure; use the actual recording time, not t
 - Implementation / files: publishing the 18 scaffold files plus AGENTS.md and memory updates. No lesson content or additional dependencies added.
 - Validation: confirmed origin is the specified GitHub repository and remote main matches local HEAD before publication. Scaffold validation from MEM-0006 passed; publication checks will inspect the staged changes and confirm remote synchronization.
 - Outcome / remaining work (updated 2026-09-08T16:19:00+01:00): scaffold commit 20a16779bef1d90894a0f5591e9670f7f771b787 pushed successfully; remote main was verified to match local HEAD. Staged whitespace checks passed. A follow-up memory commit records the verified publication. Unit lessons and assessment tasks remain future work.
+
+### MEM-0008 — 2026-09-16T16:58:58+01:00 (Africa/Lagos)
+
+- Request: summarize where the project stands.
+- Decisions / rationale: Phase 0 architecture and scaffold are complete; next planned content is P0-U01, not yet authored. No new lesson work requested.
+- Implementation / files: read AGENTS.md and memory, inspected the file inventory, and updated memory only.
+- Validation: confirmed scaffold and shared skill files remain present with no unit lessons in the inventory. Git status/log checks were rejected by an ownership safety check even with the per-command safe.directory setting; current Git synchronization was not verified. Last confirmed publication was September 8, with follow-up memory commit 2b11db8 recorded in the conversation.
+- Outcome / remaining work: report completed planning/scaffold, pending lessons and learner activities, and P0-U01 as the next step. No commit or push performed.
