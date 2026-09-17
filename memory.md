@@ -5,19 +5,37 @@ This file preserves essential decisions and implementation history for the OR-ME
 ## Current state
 
 - Purpose: a reusable mentorship curriculum and reproducible research-training environment for graduate trainees, research assistants, and early-stage medical imaging AI researchers. The owner is the first learner/test user.
-- Scope: Phase 0 — Researcher Setup only, Week 1 of a 24-week program. Design for future GTs without over-engineering. The minimum Phase 0 scaffold is published on origin/main; lessons remain unwritten.
+- Scope: Phase 0 — Researcher Setup only, Week 1 of a 24-week program. P0-U01 is now active with authored teaching and practice materials; learner completion has not been demonstrated in repository submissions. P0-U02 through P0-U07 remain planned.
 - Architecture: a progressive technical track and an iterative research track converge in research projects. Research practice runs through Phases 0–5; Phase 6 formally develops rigorous independent research design and defense.
 - Learning artifacts: Concept Unit, Practical Lab, Research Experiment, and Paper/Literature Unit templates. Mathematics and formal experiments apply where meaningful. Major concepts and experiments require slide material.
 - Identifiers: units `P0-U01`; experiments `P1-EXP-001`; assessments `P0-A01`; reproductions `REP-001`; original projects `PRJ-001`. Unit IDs connect curriculum, slides, labs, and assessment files; assessments also carry their own IDs within documents.
-- Artifact boundaries: `research-notes/` contains thinking; `experiments/` contains execution evidence. Reproductions and projects reference experiment IDs rather than duplicate outputs. `configs/`, if needed, holds shared defaults; experiment-specific configuration belongs in `experiments/`. Full directory responsibilities are in AGENTS.md Section 6.
+- Artifact boundaries: the new final section of AGENTS.md adds `lecture-notes/` for durable teaching material; `curriculum/` now provides sequence, objectives, pacing, and navigation without duplicating full lecture notes. Labs are guided practice; slides are trainee teach-back presentations (Marp Markdown); assessments are independent reusable competency checks, with completed responses separate under `assessments/<phase>/submissions/` when privacy/ownership permits. Research notes hold reasoning and reflection; experiments hold execution evidence. Typical sequence: lecture note → recommended reading → lab → trainee teach-back → independent assessment → mentor review → reflection. Earlier structure/table descriptions have not all been reconciled with this addition.
 - Tooling defaults: Python 3.11, built-in `venv`, `requirements.txt`, `requirements-dev.txt`, VS Code, Jupyter, and canonical Marp Markdown slides. These are decisions, not installed or configured infrastructure.
 - Literature: `resources/literature/` contains guidance, a comments-only `references.bib`, and a headers-only `literature-map.csv`. No papers have been added. Zotero is optional. Research-paper PDFs must not be committed.
 - Licensing: TBD pending ownership and Ormedian release decisions. Do not create `LICENSE` yet.
 - Standards: preserve learner reasoning, make targeted fixes, verify claims, record reproducibility metadata, validate relevant work, and exclude secrets, restricted data, patient information, and unnecessary large artifacts.
-- Implementation: initial guidance, memory, and skill were published to origin/main (`f7a388f`, followed by memory update `c63b0d6`). The Phase 0 scaffold was committed and published in commit 20a1677. It contains a root overview, ignore rules, comments-only requirements files, a Phase 0 guide, artifact-directory guidance, literature tracking files, and six `.gitkeep` placeholders. No lesson, executable lab, installed environment, slide deck, or assessment task has been implemented.
+- Implementation: scaffold publication remains recorded in MEM-0007. Subsequent local history includes `12d92f5` (Lecture note and assessment), `f474d51` (structural changes), and `80eaaee` (reasoning lab). P0-U01 now has a curriculum guide, version 1.0 lecture DOCX, guided reasoning lab DOCX, and P0-A01 assessment DOCX with a mentor rubric. These are authored materials, not evidence of completed learner work. A Daniel-named lab copy is now present; its extracted paragraph text matches the guided lab template, so it does not demonstrate completion. Presentation guidance and an Ormedian logo are now present under resources/style-guides/. No trainee slide deck, completed submission, journal reflection, executable code, or experiment results were found. Both requirements files remain comments-only; environment installation was not checked.
 - Phase 0 readiness: prerequisites and evidence-based Ready / Ready with review / Repeat selected units decisions are in [the phase guide](curriculum/phase-0-researcher-setup/README.md). No numerical scoring or fixed study hours were introduced. Practical reproduction and responsible sharing are required for progression; missing explanations may receive targeted review.
 - PR review skill: the authoritative shared copy is now [.agents/skills/ormedian-pr-review/SKILL.md](.agents/skills/ormedian-pr-review/SKILL.md), with `agents/openai.yaml` alongside it. The personal copy was moved into this repository to avoid competing copies and to distribute it with the project. The owner chose mentoring reviews with prioritized findings, explanations, and diagnostic steps. Invoke with `$ormedian-pr-review` and a PR URL or local diff target. The skill reads current repository rules and memory; it does not automatically publish reviews or merge PRs.
 - Remote: `https://github.com/Engr-Daniel/Ormedian_Medical_ReliableAI.git` (`origin`); local publication branch is `main`.
+
+## Verified repository snapshot — 2026-09-16
+
+- Read the current root instructions and memory, relevant Markdown guides, and text extracted from the DOCX files. DOCX layout/rendering and cited readings were not independently validated during this inventory.
+- Current unit guide: [P0-U01](curriculum/phase-0-researcher-setup/P0-U01.md).
+- Canonical lecture location: `lecture-notes/phase-0/P0-U01_Lecture_Notes_Researcher_Mindset_and_Scientific_Workflow.docx`. Covers scientific reasoning, bounded claims, hypotheses, diagnostic experiments, negative results, and iterative research; includes recommended further reading.
+- Guided lab: `labs/phase-0/P0-U01_Lab_Researcher_Mindset_and_Scientific_Workflow.docx`. Ten reasoning activities; suggested 60–90 minutes. It asks the learner to preserve their own reasoning rather than have AI generate responses.
+- Independent assessment: `assessments/phase-0/P0-A01_Assessment_Researcher_Mindset_and_Scientific_Workflow.docx`. Six sections plus mentor competency rubric; suggested 60–75 minutes. Open-resource unless the mentor specifies otherwise; answers must be the learner's own.
+- New README guidance exists in lecture-notes/phase-0, labs/phase-0, slides/phase-0, and assessments/phase-0/submissions. The submissions directory contains guidance only; slides contain guidance and a placeholder, not a completed teach-back.
+- Bibliography remains comments-only and the literature map has headers only, despite further-reading recommendations in the lecture. No bibliography entries were invented or imported.
+- Git status outside the sandbox succeeded: branch `main`, HEAD `80eaaee`, no changes before this memory update, and no ahead/behind difference against the locally cached `origin/main`. No fresh remote query was performed, so live GitHub synchronization is not established. Sandboxed Git still reports an ownership error; no Git configuration was changed.
+
+## Observed documentation inconsistencies
+
+- The root README still calls the repository a scaffold with no authored lessons/labs/assessments. This is stale relative to the P0-U01 materials.
+- The lecture DOCX also remains in `curriculum/phase-0-researcher-setup/`; The copies were byte-identical at the September 16 inspection, but the canonical lecture-notes copy has since been modified; that earlier equivalence must not be assumed now. Current directory guidance names lecture-notes as the teaching-material location. No duplicate was removed during this inspection.
+- `P0-A01` now identifies the P0-U01 assessment, but the Phase 0 README still reserves the same ID for the overall phase assessment/P0-U07 and says actual assessment prompts are future work. This needs a later naming/navigation decision.
+- The AGENTS.md tree and earlier directory table do not yet fully reflect the added lecture-notes boundaries. Record the discrepancy rather than silently changing the rules in a memory-refresh task.
 
 ## Phase 0 schedule
 
@@ -33,9 +51,9 @@ This file preserves essential decisions and implementation history for the OR-ME
 
 ## Pending decisions and work
 
-- Author unit content and actual assessment tasks when requested, using the Phase 0 guide's prerequisites and competency criteria.
+- Next learner sequence: study P0-U01 lecture/readings, complete the guided reasoning lab, prepare teach-back slides, complete P0-A01 independently, receive mentor feedback, and record reflection. No completion should be inferred from the existence of templates.
 - Defer detailed Weeks 2–24 allocation until Phase 0 is finished and Phase 1 planning begins.
-- Await the owner's next instruction before writing P0-U01. Publication of the scaffold was authorized in MEM-0007.
+- P0-U01 materials already exist; do not recreate them based on older memory. Await instructions for learner support, documentation reconciliation, or P0-U02 authoring.
 - Resolve project ownership/release intentions before selecting a license.
 
 ## Request log
@@ -115,3 +133,19 @@ Append concise entries with this structure; use the actual recording time, not t
 - Implementation / files: read AGENTS.md and memory, inspected the file inventory, and updated memory only.
 - Validation: confirmed scaffold and shared skill files remain present with no unit lessons in the inventory. Git status/log checks were rejected by an ownership safety check even with the per-command safe.directory setting; current Git synchronization was not verified. Last confirmed publication was September 8, with follow-up memory commit 2b11db8 recorded in the conversation.
 - Outcome / remaining work: report completed planning/scaffold, pending lessons and learner activities, and P0-U01 as the next step. No commit or push performed.
+
+### MEM-0009 — 2026-09-16T23:12:46+01:00 (Africa/Lagos)
+
+- Request: inspect the repository and refresh memory to the present state; the follow-up "continue" resumes this task.
+- Decisions / rationale: supersede stale claims in the current-state summary that all unit content is unwritten. Record authored P0-U01 materials separately from unobserved learner completion and preserve earlier entries as historical records.
+- Implementation / files: updated memory.md only with the current artifact boundaries, P0-U01 inventory, Git snapshot, and observed inconsistencies. No lessons, rules, duplicates, assessment responses, or citations were changed.
+- Validation: read root AGENTS.md completely, memory, the root and Phase 0 guides, unit guide, and new directory guidance; extracted DOCX text using Python's standard-library ZIP/XML readers; compared lecture SHA-256 hashes; checked requirements and literature files. Read-only Git status/log/remote configuration succeeded outside the sandbox after sandboxed ownership failures. HEAD is 80eaaee; cached origin/main matches. No live remote check, document rendering, or scientific content audit performed.
+- Outcome / remaining work: memory now reflects active P0-U01 and pending learner work. Record stale README status, duplicate lecture, and assessment-ID conflict for later reconciliation. No commit or push performed; this memory update is local.
+
+### MEM-0010 ? 2026-09-17T22:14:48+01:00 (Africa/Lagos)
+
+- Request: add the current file changes and update the remote repository.
+- Decisions / rationale: publish the revised canonical lecture DOCX, Daniel-named lab DOCX, presentation style guide, logo, and accumulated memory update. Leave the two untracked reading PDFs local under the repository's paper/book PDF policy. No curriculum reconciliation or new lesson content is in scope.
+- Implementation / files: refreshed this summary and prepared the five files above for publication on main. The Daniel-named lab has the same extracted paragraph text as the template; learner completion remains unverified.
+- Validation: read AGENTS.md and memory, inspected Git status and the style guide, checked both DOCX ZIP integrity and compared lab paragraph text. Confirmed origin URL and live remote main at 80eaaee57ed08f83d203f4bb4e3f5ed4f835e8ee before publication. Document rendering and scientific content were not independently reviewed.
+- Outcome / remaining work: committing and pushing the selected updates is authorized; publication verification follows this record. Reading PDFs remain local. Existing README, duplicate-lecture, and assessment-ID inconsistencies remain pending.
