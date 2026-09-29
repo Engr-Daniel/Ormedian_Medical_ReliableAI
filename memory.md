@@ -4,7 +4,7 @@ This file preserves essential decisions and implementation history for the OR-ME
 
 ## Current state
 
-- Research reflection: `research-notes/phase-0/P0-U01/P0-U01_research_reflection_Daniel.md` now exists locally and is organized under six requested reflection questions. Editorial polishing preserves the learner's account; it is not a mentor competency assessment and supersedes older inventory claims that no reflection exists.
+- Research reflection: `research-notes/phase-0/P0-U01/P0-U01_research_reflection_Daniel.md` is organized under six requested reflection questions and was published to origin/main in `c4ea9f9` on 2026-09-29. Editorial polishing preserves the learner's account; it is not a mentor competency assessment and supersedes older inventory claims that no reflection exists.
 - Presentation palette: the style guide permits coordinated deep blue, navy, royal/electric blue, azure, sky blue and pale blue alongside black and white. Multiple shades may share a slide, with consistent roles and readable contrast; the logo must retain its original colours.
 - Latest publication: presentation palette update `cb80ef6` and existing lab-answer/AUROC-note commit `5d3b8ce` were pushed to origin/main and verified on 2026-09-29. Learner responses and the supplementary note were not academically reviewed in this publication task.
 - New artifacts observed 2026-09-29: P0-A01 submission contains trainee responses; a P0-U01 teach-back PDF is present; the AUROC supplementary DOCX is revised. These supersede older inventory claims that no submission or slide deck exists. Mentor assessment and slide rendering have not been performed; the canonical Marp source remains missing.
@@ -198,3 +198,11 @@ Append concise entries with this structure; use the actual recording time, not t
 - Implementation / files: edited `research-notes/phase-0/P0-U01/P0-U01_research_reflection_Daniel.md` into six question headings, clarified the lab scenario and metric wording, and organized intended research habits as questions; updated memory.
 - Validation: read the original reflection and research-notes guidance, checked for nested AGENTS.md files (none found), and read the revised Markdown back to confirm all six questions and the original themes remain. No document rendering or competency assessment performed.
 - Outcome / remaining work: polished reflection saved locally; no commit or push requested or performed.
+
+### MEM-0016 — 2026-09-29T13:10:56+01:00 (Africa/Lagos)
+
+- Request: push the polished reflection.
+- Decisions / rationale: publish the specifically requested reflection and its memory record to the established origin/main; leave recommended books local.
+- Implementation / files: committed the reflection and preceding memory update as `c4ea9f9c43ae3b923583ead2d0e92aad7fa6ea17`; updated memory with the verified outcome.
+- Validation: reread the reflection, verified origin and live remote before publication, passed staged whitespace checks, pushed successfully, and confirmed live main matches the reflection commit.
+- Outcome / remaining work: reflection published. This follow-up memory record is included in a documentation commit; no further reflection changes needed for this request.
