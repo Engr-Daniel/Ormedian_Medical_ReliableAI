@@ -7,7 +7,7 @@ This file preserves essential decisions and implementation history for the OR-ME
 - Presentation palette: the style guide permits coordinated deep blue, navy, royal/electric blue, azure, sky blue and pale blue alongside black and white. Multiple shades may share a slide, with consistent roles and readable contrast; the logo must retain its original colours.
 - Latest publication: presentation palette update `cb80ef6` and existing lab-answer/AUROC-note commit `5d3b8ce` were pushed to origin/main and verified on 2026-09-29. Learner responses and the supplementary note were not academically reviewed in this publication task.
 - New artifacts observed 2026-09-29: P0-A01 submission contains trainee responses; a P0-U01 teach-back PDF is present; the AUROC supplementary DOCX is revised. These supersede older inventory claims that no submission or slide deck exists. Mentor assessment and slide rendering have not been performed; the canonical Marp source remains missing.
-- Publication update: `5ef77ab` published the assessment submission, slide PDF and AUROC note to origin/main; live remote synchronization verified 2026-09-29. The duplicate curriculum lecture deletion remains local, as do recommended-book PDFs.
+- Publication update: `5ef77ab` published the assessment submission, slide PDF and AUROC note to origin/main; `6830468` subsequently removed the duplicate curriculum lecture, retaining the canonical lecture-notes copy. Both publications were verified on 2026-09-29. Recommended-book PDFs remain local.
 - Purpose: a reusable mentorship curriculum and reproducible research-training environment for graduate trainees, research assistants, and early-stage medical imaging AI researchers. The owner is the first learner/test user.
 - Scope: Phase 0 — Researcher Setup only, Week 1 of a 24-week program. P0-U01 is now active with authored teaching and practice materials; learner completion has not been demonstrated in repository submissions. P0-U02 through P0-U07 remain planned.
 - Architecture: a progressive technical track and an iterative research track converge in research projects. Research practice runs through Phases 0–5; Phase 6 formally develops rigorous independent research design and defense.
@@ -37,7 +37,7 @@ This file preserves essential decisions and implementation history for the OR-ME
 ## Observed documentation inconsistencies
 
 - The root README still calls the repository a scaffold with no authored lessons/labs/assessments. This is stale relative to the P0-U01 materials.
-- The lecture DOCX also remains in `curriculum/phase-0-researcher-setup/`; The copies were byte-identical at the September 16 inspection, but the canonical lecture-notes copy has since been modified; that earlier equivalence must not be assumed now. Current directory guidance names lecture-notes as the teaching-material location. No duplicate was removed during this inspection.
+- Resolved 2026-09-29 (MEM-0014): the outdated duplicate lecture DOCX in `curriculum/phase-0-researcher-setup/` was removed from main. The canonical `lecture-notes/` copy remains.
 - `P0-A01` now identifies the P0-U01 assessment, but the Phase 0 README still reserves the same ID for the overall phase assessment/P0-U07 and says actual assessment prompts are future work. This needs a later naming/navigation decision.
 - The AGENTS.md tree and earlier directory table do not yet fully reflect the added lecture-notes boundaries. Record the discrepancy rather than silently changing the rules in a memory-refresh task.
 
@@ -181,3 +181,11 @@ Append concise entries with this structure; use the actual recording time, not t
 - Approval block (2026-09-29T12:49:42+01:00): automatic approval review rejected the combined publication because trainee responses require explicit approval for public export. Asked the owner whether to publish the assessment; response pending. Proceed with the AUROC note, slide PDF and memory only. A newly observed deletion of the duplicate curriculum lecture appeared during this task and is left unstaged.
 - Approval received (2026-09-29T12:50:22+01:00): owner explicitly approved publishing the assessment responses to the named GitHub repository. Include the submission in this push. Git treated the PDF as text in whitespace checking; its staged blob hash matches the raw file hash, confirming unchanged bytes. Restrict whitespace validation to Markdown.
 - Verified outcome (2026-09-29T12:51:23+01:00): pushed `5ef77ab087f6fc5ca91fd852d54fb6f48b5aae83`; live remote main matches local HEAD. Markdown whitespace validation passed. Assessment file changed during the task (42,519 bytes inspected; 41,880 bytes committed), so earlier text inspection does not establish exact final-content validation. Duplicate lecture deletion and recommended books remain local. This follow-up memory update records the completed publication.
+
+### MEM-0014 — 2026-09-29T12:56:33+01:00 (Africa/Lagos)
+
+- Request: remove the locally deleted duplicate lecture note from the remote too.
+- Decisions / rationale: publish the exact deletion under curriculum while preserving the canonical lecture-notes copy; no history rewriting.
+- Implementation / files: committed the duplicate DOCX deletion as `683046854107fae936f61a63e6e07ffbc97d9003`; updated this memory summary and log.
+- Validation: confirmed canonical file exists, searched Markdown for exact-filename references (none outside memory), passed staged whitespace checks, and verified the published tree retains only the canonical path. Live remote main matched the deletion commit after push.
+- Outcome / remaining work: duplicate removed from GitHub main. Recommended-book PDFs remain local. This memory record is published in a follow-up documentation commit.
