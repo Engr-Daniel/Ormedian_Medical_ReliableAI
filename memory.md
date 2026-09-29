@@ -5,6 +5,7 @@ This file preserves essential decisions and implementation history for the OR-ME
 ## Current state
 
 - Presentation palette: the style guide permits coordinated deep blue, navy, royal/electric blue, azure, sky blue and pale blue alongside black and white. Multiple shades may share a slide, with consistent roles and readable contrast; the logo must retain its original colours.
+- Latest publication: presentation palette update `cb80ef6` and existing lab-answer/AUROC-note commit `5d3b8ce` were pushed to origin/main and verified on 2026-09-29. Learner responses and the supplementary note were not academically reviewed in this publication task.
 - Purpose: a reusable mentorship curriculum and reproducible research-training environment for graduate trainees, research assistants, and early-stage medical imaging AI researchers. The owner is the first learner/test user.
 - Scope: Phase 0 — Researcher Setup only, Week 1 of a 24-week program. P0-U01 is now active with authored teaching and practice materials; learner completion has not been demonstrated in repository submissions. P0-U02 through P0-U07 remain planned.
 - Architecture: a progressive technical track and an iterative research track converge in research projects. Research practice runs through Phases 0–5; Phase 6 formally develops rigorous independent research design and defense.
@@ -166,3 +167,4 @@ Append concise entries with this structure; use the actual recording time, not t
 - Implementation / files: prepared `resources/style-guides/ORMEDIAN_PRESENTATION_STYLE.md` and `memory.md` for commit. Existing committed learner material is preserved without modification.
 - Validation: reviewed the two text diffs and existing commit file summary; verified origin matches the requested repository and live remote main is `be88708`, the parent of the pending local commit. Publication and final synchronization checks are pending.
 - Outcome / remaining work: authorized publication in progress; record the verified outcome after pushing. The earlier memory description of the Daniel lab matching the template is historical; the existing lab-answer commit means it must not be treated as a current verification of learner completion.
+- Verified outcome (2026-09-29T07:46:13+01:00): committed the style and memory updates as `cb80ef6af098a14765a7786a78aeda189bb539d2`, pushed main successfully, and confirmed the live remote hash matches local HEAD. Staged whitespace checks passed. Only `resources/recommended-books/` remained untracked. A follow-up memory commit records this successful publication.
