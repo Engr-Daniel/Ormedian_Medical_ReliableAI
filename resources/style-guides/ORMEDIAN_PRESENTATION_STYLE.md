@@ -13,11 +13,18 @@ not a corporate marketing deck and not a generic classroom PowerPoint.
 COLOUR SYSTEM
 =============
 
-Use a restrained three-colour system based on the Ormedian identity:
+Use a restrained colour system based on the Ormedian identity:
+blue shades supported by black and white.
 
 PRIMARY:
-Ormedian Blue — use a vivid royal/electric blue close to the blue in
-the supplied Ormedian logo.
+Ormedian Blue family — blue is not limited to a single shade or to
+lighter/darker versions of the logo blue. Deep blue, navy, royal blue,
+electric blue, azure and sky blue are all welcome.
+
+Use the blue in the supplied Ormedian logo as a brand reference while
+choosing a small, coordinated selection of blue shades for each deck.
+Multiple blue shades may appear together on a slide where they help
+explain the content or establish visual hierarchy.
 
 NEUTRALS:
 Black / near-black — primary body text, diagrams and strong contrast.
@@ -42,8 +49,19 @@ Use white as the dominant background.
 Do NOT introduce unrelated accent colours unless the content genuinely
 requires semantic distinction.
 
-If additional shades are required, derive lighter/darker shades from
-Ormedian blue or use neutral greys.
+Suggested roles for blue shades:
+- deep blue or navy for headings and strong emphasis
+- royal blue, electric blue or azure for key concepts, arrows and highlights
+- sky blue or pale blue for supporting diagram fills and subtle panels
+
+These are flexible roles, not a requirement to use every shade. Keep
+the role of each chosen shade consistent throughout a deck. Neutral
+greys may also support the palette.
+
+Maintain clear contrast between text and its background. Use dark text
+on light blue fills; avoid pale blue text on white. Do not rely on subtle
+shade differences alone to distinguish concepts or data series: add
+labels, shapes or line styles where needed.
 
 The deck should remain recognizably blue + black + white throughout.
 
@@ -153,7 +171,7 @@ white background
 +
 black text/structure
 +
-Ormedian blue emphasis
+Ormedian blue-family emphasis (one or more coordinated blue shades)
 
 Use simple geometric shapes, clean arrows and minimal line icons.
 
@@ -235,7 +253,7 @@ should feel like part of the same presentation family.
 
 Keep consistent:
 
-- colour palette
+- selected blue palette and the role of each shade
 - typography
 - logo placement
 - title positioning
@@ -255,6 +273,8 @@ Before considering the deck complete, verify:
 [ ] Quattrocento is used consistently for presentation text.
 [ ] Courier New is restricted to technical/monospace content.
 [ ] Blue, black and white dominate the visual identity.
+[ ] Blue shades form a coordinated palette with consistent roles.
+[ ] Text contrasts clearly with blue fills; meaning does not rely on shade alone.
 [ ] Ormedian logo placement is consistent.
 [ ] No slide is overcrowded.
 [ ] Every slide communicates one dominant idea.

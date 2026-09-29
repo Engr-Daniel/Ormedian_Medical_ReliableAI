@@ -4,6 +4,7 @@ This file preserves essential decisions and implementation history for the OR-ME
 
 ## Current state
 
+- Presentation palette: the style guide permits coordinated deep blue, navy, royal/electric blue, azure, sky blue and pale blue alongside black and white. Multiple shades may share a slide, with consistent roles and readable contrast; the logo must retain its original colours.
 - Purpose: a reusable mentorship curriculum and reproducible research-training environment for graduate trainees, research assistants, and early-stage medical imaging AI researchers. The owner is the first learner/test user.
 - Scope: Phase 0 — Researcher Setup only, Week 1 of a 24-week program. P0-U01 is now active with authored teaching and practice materials; learner completion has not been demonstrated in repository submissions. P0-U02 through P0-U07 remain planned.
 - Architecture: a progressive technical track and an iterative research track converge in research projects. Research practice runs through Phases 0–5; Phase 6 formally develops rigorous independent research design and defense.
@@ -149,3 +150,19 @@ Append concise entries with this structure; use the actual recording time, not t
 - Implementation / files: refreshed this summary and prepared the five files above for publication on main. The Daniel-named lab has the same extracted paragraph text as the template; learner completion remains unverified.
 - Validation: read AGENTS.md and memory, inspected Git status and the style guide, checked both DOCX ZIP integrity and compared lab paragraph text. Confirmed origin URL and live remote main at 80eaaee57ed08f83d203f4bb4e3f5ed4f835e8ee before publication. Document rendering and scientific content were not independently reviewed.
 - Outcome / remaining work (updated 2026-09-17T22:15:36+01:00): published commit 9ffbc1d7c8062f5cc2c00d5a1ac75a8ab263f8b1 to origin/main and verified that live remote HEAD matches local HEAD. Staged whitespace checks passed. This follow-up memory update records the verified publication. Only the reading PDFs remain untracked locally. Existing README, duplicate-lecture, and assessment-ID inconsistencies remain pending.
+
+### MEM-0011 — 2026-09-29T07:42:02+01:00 (Africa/Lagos)
+
+- Request: understand the repository context and broaden the presentation style from one blue shade to shades including deep blue, sky blue and azure.
+- Decisions / rationale: allow a coordinated blue family, retaining the blue/black/white identity, consistent shade roles, readable contrast and unchanged logo colours.
+- Implementation / files: updated colour guidance, illustration wording, consistency guidance and quality checks in `resources/style-guides/ORMEDIAN_PRESENTATION_STYLE.md`; updated this memory summary and log. No AGENTS.md rule conflicts required changes.
+- Validation: read repository instructions, memory, root README and full presentation guide; inspected relevant Markdown inventory and read back the revised guide for consistency. Git status was blocked by an ownership safety check; no Git configuration was changed. No slide rendering or remote inspection was performed; no repository link was supplied in this request, so local context was used.
+- Outcome / remaining work: requested style guidance updated locally. No commit or push performed.
+
+### MEM-0012 — 2026-09-29T07:45:13+01:00 (Africa/Lagos)
+
+- Request: push the updates to the owner's GitHub repository.
+- Decisions / rationale: publish the presentation palette change and memory on main, including existing unpushed commit `5d3b8ce` (lab answers and AUROC supplementary note). Leave untracked recommended books local under the repository PDF policy.
+- Implementation / files: prepared `resources/style-guides/ORMEDIAN_PRESENTATION_STYLE.md` and `memory.md` for commit. Existing committed learner material is preserved without modification.
+- Validation: reviewed the two text diffs and existing commit file summary; verified origin matches the requested repository and live remote main is `be88708`, the parent of the pending local commit. Publication and final synchronization checks are pending.
+- Outcome / remaining work: authorized publication in progress; record the verified outcome after pushing. The earlier memory description of the Daniel lab matching the template is historical; the existing lab-answer commit means it must not be treated as a current verification of learner completion.
