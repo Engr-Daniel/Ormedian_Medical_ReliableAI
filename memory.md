@@ -4,6 +4,7 @@ This file preserves essential decisions and implementation history for the OR-ME
 
 ## Current state
 
+- Research reflection: `research-notes/phase-0/P0-U01/P0-U01_research_reflection_Daniel.md` now exists locally and is organized under six requested reflection questions. Editorial polishing preserves the learner's account; it is not a mentor competency assessment and supersedes older inventory claims that no reflection exists.
 - Presentation palette: the style guide permits coordinated deep blue, navy, royal/electric blue, azure, sky blue and pale blue alongside black and white. Multiple shades may share a slide, with consistent roles and readable contrast; the logo must retain its original colours.
 - Latest publication: presentation palette update `cb80ef6` and existing lab-answer/AUROC-note commit `5d3b8ce` were pushed to origin/main and verified on 2026-09-29. Learner responses and the supplementary note were not academically reviewed in this publication task.
 - New artifacts observed 2026-09-29: P0-A01 submission contains trainee responses; a P0-U01 teach-back PDF is present; the AUROC supplementary DOCX is revised. These supersede older inventory claims that no submission or slide deck exists. Mentor assessment and slide rendering have not been performed; the canonical Marp source remains missing.
@@ -189,3 +190,11 @@ Append concise entries with this structure; use the actual recording time, not t
 - Implementation / files: committed the duplicate DOCX deletion as `683046854107fae936f61a63e6e07ffbc97d9003`; updated this memory summary and log.
 - Validation: confirmed canonical file exists, searched Markdown for exact-filename references (none outside memory), passed staged whitespace checks, and verified the published tree retains only the canonical path. Live remote main matched the deletion commit after push.
 - Outcome / remaining work: duplicate removed from GitHub main. Recommended-book PDFs remain local. This memory record is published in a follow-up documentation commit.
+
+### MEM-0015 — 2026-09-29T13:08:13+01:00 (Africa/Lagos)
+
+- Request: polish the local P0-U01 reflection and separate the six supplied questions.
+- Decisions / rationale: retain the learner's first-person experiences and reasoning; improve wording and paragraph flow without inventing experiences or answering a new assessment. Identify the unit as P0-U01 and retain P0-A01 as the related assessment.
+- Implementation / files: edited `research-notes/phase-0/P0-U01/P0-U01_research_reflection_Daniel.md` into six question headings, clarified the lab scenario and metric wording, and organized intended research habits as questions; updated memory.
+- Validation: read the original reflection and research-notes guidance, checked for nested AGENTS.md files (none found), and read the revised Markdown back to confirm all six questions and the original themes remain. No document rendering or competency assessment performed.
+- Outcome / remaining work: polished reflection saved locally; no commit or push requested or performed.
