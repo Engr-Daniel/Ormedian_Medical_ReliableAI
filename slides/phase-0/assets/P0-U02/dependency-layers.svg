@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-labelledby="title desc">
+  <title id="title">Declared intent versus installed state</title>
+  <desc id="desc">One declared package, ipykernel, brought 27 transitive packages. pip freeze records all 28. pip and setuptools were installed by venv itself.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F5BD8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="460" fill="#FFFFFF"/>
+
+  <!-- Declared -->
+  <rect x="40" y="60" width="320" height="230" rx="14" fill="#0B2A5B"/>
+  <text x="200" y="110" font-family="Quattrocento, Georgia, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">Declared</text>
+  <text x="200" y="145" font-family="Quattrocento, Georgia, serif" font-size="20" text-anchor="middle" fill="#FFFFFF">what the project chose</text>
+  <text x="200" y="205" font-family="Courier New, monospace" font-size="21" text-anchor="middle" fill="#FFFFFF">ipykernel==7.4.0</text>
+  <text x="200" y="255" font-family="Courier New, monospace" font-size="17" text-anchor="middle" fill="#DCEBFB">requirements-dev.txt</text>
+
+  <!-- Transitive -->
+  <rect x="440" y="60" width="320" height="230" rx="14" fill="#DCEBFB" stroke="#1F5BD8" stroke-width="2"/>
+  <text x="600" y="110" font-family="Quattrocento, Georgia, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#0B2A5B">Transitive</text>
+  <text x="600" y="145" font-family="Quattrocento, Georgia, serif" font-size="20" text-anchor="middle" fill="#111111">what came along</text>
+  <text x="600" y="210" font-family="Quattrocento, Georgia, serif" font-size="44" font-weight="700" text-anchor="middle" fill="#0B2A5B">27</text>
+  <text x="600" y="255" font-family="Courier New, monospace" font-size="17" text-anchor="middle" fill="#111111">ipython, jedi, pyzmq, ...</text>
+
+  <!-- Snapshot -->
+  <rect x="840" y="60" width="320" height="230" rx="14" fill="#FFFFFF" stroke="#111111" stroke-width="2"/>
+  <text x="1000" y="110" font-family="Quattrocento, Georgia, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#0B2A5B">Snapshot</text>
+  <text x="1000" y="145" font-family="Quattrocento, Georgia, serif" font-size="20" text-anchor="middle" fill="#111111">what is installed now</text>
+  <text x="1000" y="210" font-family="Quattrocento, Georgia, serif" font-size="44" font-weight="700" text-anchor="middle" fill="#0B2A5B">28</text>
+  <text x="1000" y="255" font-family="Courier New, monospace" font-size="17" text-anchor="middle" fill="#111111">pip freeze</text>
+
+  <line x1="360" y1="175" x2="432" y2="175" stroke="#1F5BD8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="760" y1="175" x2="832" y2="175" stroke="#1F5BD8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Seeded by venv -->
+  <rect x="40" y="320" width="1120" height="50" rx="10" fill="#F2F3F5"/>
+  <text x="600" y="353" font-family="Quattrocento, Georgia, serif" font-size="20" text-anchor="middle" fill="#111111">Neither declared nor transitive: pip and setuptools, installed by venv itself, and omitted by pip freeze</text>
+
+  <text x="200" y="420" font-family="Quattrocento, Georgia, serif" font-size="22" font-weight="700" text-anchor="middle" fill="#1F5BD8">intent</text>
+  <text x="1000" y="420" font-family="Quattrocento, Georgia, serif" font-size="22" font-weight="700" text-anchor="middle" fill="#1F5BD8">state</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence before fixes</title>
+  <desc id="desc">Six steps: observe the exact error, identify the interpreter, form at least two hypotheses, check with the same interpreter, apply the minimal fix, and rerun the original command.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F5BD8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="330" fill="#FFFFFF"/>
+
+  <g font-family="Quattrocento, Georgia, serif" text-anchor="middle">
+    <!-- Step boxes: width 168, gap 32 -->
+    <rect x="16" y="40" width="168" height="170" rx="14" fill="#FFFFFF" stroke="#111111" stroke-width="2"/>
+    <text x="100" y="82" font-size="30" font-weight="700" fill="#1F5BD8">1</text>
+    <text x="100" y="124" font-size="22" font-weight="700" fill="#111111">Observe</text>
+    <text x="100" y="156" font-size="17" fill="#111111">copy the exact</text>
+    <text x="100" y="178" font-size="17" fill="#111111">error and context</text>
+
+    <rect x="216" y="40" width="168" height="170" rx="14" fill="#0B2A5B"/>
+    <text x="300" y="82" font-size="30" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="300" y="124" font-size="22" font-weight="700" fill="#FFFFFF">Which</text>
+    <text x="300" y="150" font-size="22" font-weight="700" fill="#FFFFFF">interpreter?</text>
+    <text x="300" y="184" font-size="16" fill="#DCEBFB" font-family="Courier New, monospace">sys.executable</text>
+
+    <rect x="416" y="40" width="168" height="170" rx="14" fill="#FFFFFF" stroke="#111111" stroke-width="2"/>
+    <text x="500" y="82" font-size="30" font-weight="700" fill="#1F5BD8">3</text>
+    <text x="500" y="124" font-size="22" font-weight="700" fill="#111111">Hypotheses</text>
+    <text x="500" y="156" font-size="17" fill="#111111">at least two,</text>
+    <text x="500" y="178" font-size="17" fill="#111111">before any fix</text>
+
+    <rect x="616" y="40" width="168" height="170" rx="14" fill="#0B2A5B"/>
+    <text x="700" y="82" font-size="30" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="700" y="124" font-size="22" font-weight="700" fill="#FFFFFF">Check with</text>
+    <text x="700" y="150" font-size="22" font-weight="700" fill="#FFFFFF">the SAME one</text>
+    <text x="700" y="184" font-size="16" fill="#DCEBFB" font-family="Courier New, monospace">-m pip show</text>
+
+    <rect x="816" y="40" width="168" height="170" rx="14" fill="#FFFFFF" stroke="#111111" stroke-width="2"/>
+    <text x="900" y="82" font-size="30" font-weight="700" fill="#1F5BD8">5</text>
+    <text x="900" y="124" font-size="22" font-weight="700" fill="#111111">Minimal fix</text>
+    <text x="900" y="156" font-size="17" fill="#111111">change only the</text>
+    <text x="900" y="178" font-size="17" fill="#111111">failing context</text>
+
+    <rect x="1016" y="40" width="168" height="170" rx="14" fill="#FFFFFF" stroke="#111111" stroke-width="2"/>
+    <text x="1100" y="82" font-size="30" font-weight="700" fill="#1F5BD8">6</text>
+    <text x="1100" y="124" font-size="22" font-weight="700" fill="#111111">Retest</text>
+    <text x="1100" y="156" font-size="17" fill="#111111">rerun the exact</text>
+    <text x="1100" y="178" font-size="17" fill="#111111">failed command</text>
+  </g>
+
+  <g stroke="#1F5BD8" stroke-width="3" marker-end="url(#arrow)">
+    <line x1="186" y1="125" x2="212" y2="125"/>
+    <line x1="386" y1="125" x2="412" y2="125"/>
+    <line x1="586" y1="125" x2="612" y2="125"/>
+    <line x1="786" y1="125" x2="812" y2="125"/>
+    <line x1="986" y1="125" x2="1012" y2="125"/>
+  </g>
+
+  <rect x="16" y="250" width="1168" height="56" rx="10" fill="#DCEBFB"/>
+  <text x="600" y="286" font-family="Quattrocento, Georgia, serif" font-size="21" text-anchor="middle" fill="#0B2A5B">Steps 2 and 4 are where I nearly went wrong: a bare python in an active .venv checks the wrong environment.</text>
+</svg>
