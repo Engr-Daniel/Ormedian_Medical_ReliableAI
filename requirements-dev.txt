@@ -1,3 +1,4 @@
-# No third-party development dependencies are needed for the scaffold.
-# Add Jupyter tooling when notebook work begins and test tools when code needs them.
+# Development dependencies. Jupyter tooling is included for notebook work.
 # VS Code and the Marp extension are editor tools, not pip requirements here.
+# Jupyter kernel for running notebooks in the project .venv (added in the P0-U02 lab).
+ipykernel==7.4.0
