@@ -125,7 +125,9 @@ Which packages a notebook can import depends on the kernel's interpreter, not on
 - **Supporting:** `sys.version` is not 3.11.9, the kernel name at the top right is not `.venv`, or an import that works in the `.venv` terminal fails in the notebook.
 - The kernel label alone is weaker than `sys.executable`, because a label is just a display name.
 
-**Checkpoint D screenshot:** not yet supplied. *Trainee to add a screenshot of the selected `.venv` kernel.*
+**Checkpoint D screenshot:** [checkpoint-d-kernel.png](checkpoint-d-kernel.png). The selected kernel shows as `.venv (3.11.9)`. The cell output shows `c:\Ormedian_Medical_ReliableAI\.venv\Scripts\python.exe` and Python 3.11.9 64-bit, matching the terminal evidence above. The notebook was recreated for this screenshot on 2026-10-16 and then deleted.
+
+![Checkpoint D: notebook kernel set to .venv](checkpoint-d-kernel.png)
 
 ---
 
@@ -243,7 +245,7 @@ Verified by the trainee's own commands:
 - the platform, `Windows-10-10.0.19044-SP0`;
 - Python 3.11.9 64-bit running from `.venv`;
 - `pip` belonging to `.venv`;
-- the VS Code terminal and the notebook kernel both resolving to `.venv`;
+- the VS Code terminal and the notebook kernel both resolving to `.venv`, with a Checkpoint D screenshot of the kernel selection;
 - a clean `pip check`;
 - the full `pip freeze`.
 
@@ -254,7 +256,6 @@ Unverified:
 - a rebuild on a different machine, operating system or network;
 - a rebuild with a Python 3.11 patch version other than 3.11.9;
 - the VS Code status-bar interpreter, which was not reported;
-- the kernel-selection screenshot, still pending;
 - kernel registration with `ipykernel install --user`, which was not performed;
 - behaviour after upgrading `pip` from 24.0.
 
