@@ -1,0 +1,158 @@
+P0-U02-LAB-001 sanitized command log
+Trainee: Daniel Oyewale. Shell: Windows PowerShell (VS Code integrated terminal).
+Personal paths are redacted as <user>; the repository root is C:\Ormedian_Medical_ReliableAI.
+Lines marked [reported] are the trainee's summary of a result, not pasted raw output.
+pip "new release available" notices are omitted throughout.
+
+=== Part A: baseline (2026-10-15) ===
+PS> Get-Location
+[reported] the repository root
+PS> git rev-parse --show-toplevel
+[reported] the repository root, matching Get-Location
+PS> git rev-parse --short HEAD
+8e5a7d4
+PS> py -0p
+[reported] -3.10-64 (launcher default): per-user ...\Programs\Python\Python310\python.exe
+[reported] -3.9-64: Anaconda3\python.exe
+[reported] no 3.11 entry
+PS> where.exe python
+[reported] 1st: per-user ...\Programs\Python\Python310\python.exe
+[reported] 2nd: ...\Microsoft\WindowsApps\python.exe
+PS> python --version
+Python 3.10.0
+PS> python -c "import sys; print(sys.executable); print(sys.version); print(sys.prefix); print(sys.base_prefix)"
+[reported] Python310 executable; 3.10.0 64-bit; sys.prefix equal to sys.base_prefix
+PS> Test-Path .venv
+False
+PS> py -3.11 --version
+[reported] Python 3.11 not found; launcher lists only 3.10 and 3.9
+
+=== Python 3.11.9 installation (2026-10-16) ===
+[reported] python-3.11.9-amd64.exe, Customize installation:
+  PATH: unchecked. Test suite: unchecked. Docs, pip, Tcl/Tk+IDLE, py launcher: checked.
+  Install for all users: unchecked. Add to environment variables: unchecked.
+  File associations: unchecked. Precompile standard library: checked.
+  Destination: ...\Programs\Python\Python311.
+[reported] Installer: "Setup was successful".
+PS> py -3.11 --version
+[reported] Python 3.11.9
+PS> py -3.11 -c "import sys; print(sys.executable)"
+[reported] C:\Users\<user>\AppData\Local\Programs\Python\Python311\python.exe
+PS> Test-Path .venv
+False
+
+=== Part B: create and verify .venv (2026-10-16) ===
+PS> py -3.11 -m venv .venv
+[reported] completed without error
+PS> .venv\Scripts\python.exe -c "import sys; print(sys.executable); print(sys.version); print(sys.prefix != sys.base_prefix)"
+[reported] C:\Ormedian_Medical_ReliableAI\.venv\Scripts\python.exe
+[reported] 3.11.9 ... 64 bit (AMD64)
+[reported] True
+PS> .venv\Scripts\Activate.ps1
+(.venv) PS C:\Ormedian_Medical_ReliableAI>
+(.venv) PS> python -c "import sys; print(sys.executable)"
+C:\Ormedian_Medical_ReliableAI\.venv\Scripts\python.exe
+(.venv) PS> python -m pip --version
+pip 24.0 from C:\Ormedian_Medical_ReliableAI\.venv\Lib\site-packages\pip (python 3.11)
+
+=== Part C: dependencies ===
+(.venv) PS> Get-Content requirements.txt
+# Python 3.11 is the project default.
+# No third-party runtime dependencies are needed for the Phase 0 scaffold.
+# Add justified, reproducibly constrained dependencies when a lab needs them.
+# Do not add PyTorch or other ML frameworks during setup without a concrete need.
+(.venv) PS> Get-Content requirements-dev.txt
+# No third-party development dependencies are needed for the scaffold.
+# Add Jupyter tooling when notebook work begins and test tools when code needs them.
+# VS Code and the Marp extension are editor tools, not pip requirements here.
+(.venv) PS> python -m pip install -r requirements.txt
+(no output other than the pip notice)
+(.venv) PS> python -m pip install -r requirements-dev.txt
+(no output other than the pip notice)
+(.venv) PS> python -m pip check
+No broken requirements found.
+(.venv) PS> python -m pip list
+Package    Version
+---------- -------
+pip        24.0
+setuptools 65.5.0
+
+=== Part D: VS Code and Jupyter ===
+[VS Code: Python: Select Interpreter -> .venv; new integrated terminal opened]
+PS C:\Ormedian_Medical_ReliableAI> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& c:\Ormedian_Medical_ReliableAI\.venv\Scripts\Activate.ps1)
+(.venv) PS> python -c "import sys; print(sys.executable)"
+C:\Ormedian_Medical_ReliableAI\.venv\Scripts\python.exe
+(.venv) PS> python -m pip show ipykernel
+WARNING: Package(s) not found: ipykernel
+(.venv) PS> python -m pip install ipykernel
+Successfully installed asttokens-3.0.2 colorama-0.4.6 comm-0.2.3 debugpy-1.8.22 executing-2.3.0 ipykernel-7.4.0 ipython-9.17.1 ipython-pygments-lexers-1.1.1 jedi-0.20.1 jupyter-client-8.10.0 jupyter-core-5.9.1 matplotlib-inline-0.2.2 nest-asyncio2-1.7.4 packaging-26.3 parso-0.8.7 platformdirs-4.13.3 prompt_toolkit-3.0.53 psutil-7.2.2 pure-eval-0.2.4 pygments-2.21.0 python-dateutil-2.9.0.post0 pyzmq-27.2.0 six-1.17.0 stack_data-0.6.3 tornado-6.5.10 traitlets-5.16.1 typing_extensions-4.16.0 wcwidth-0.9.2
+(.venv) PS> python -m pip show ipykernel
+Name: ipykernel
+Version: 7.4.0
+Location: C:\Ormedian_Medical_ReliableAI\.venv\Lib\site-packages
+Requires: comm, debugpy, ipython, jupyter-client, jupyter-core, matplotlib-inline, nest-asyncio2, packaging, pyzmq, tornado, traitlets
+Required-by:
+[kernel_check.ipynb, kernel .venv]
+c:\Ormedian_Medical_ReliableAI\.venv\Scripts\python.exe
+3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+[requirements-dev.txt edited: comment line + ipykernel==7.4.0 appended]
+(.venv) PS> python -m pip install -r requirements-dev.txt
+Requirement already satisfied: ipykernel==7.4.0 in c:\ormedian_medical_reliableai\.venv\lib\site-packages (from -r requirements-dev.txt (line 5)) (7.4.0)
+(26 further "Requirement already satisfied" lines for the transitive dependencies omitted)
+
+=== Part E1: package present, import fails (disposable venvs) ===
+(.venv) PS> $e1 = "$env:TEMP\p0u02-e1"
+(.venv) PS> py -3.11 -m venv "$e1\env-a"
+(.venv) PS> py -3.11 -m venv "$e1\env-b"
+Actual environment location may have moved due to redirects, links or junctions.
+  Requested location: "C:\Users\<USER~1>\AppData\Local\Temp\p0u02-e1\env-a\Scripts\python.exe"
+  Actual location:    "C:\Users\<user>\AppData\Local\Temp\p0u02-e1\env-a\Scripts\python.exe"
+(same warning for env-b)
+(.venv) PS> & "$e1\env-a\Scripts\python.exe" -m pip install colorama
+Successfully installed colorama-0.4.6
+(.venv) PS> & "$e1\env-b\Scripts\python.exe" -c "import colorama; print('import ok')"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'colorama'
+[new terminal opened; $e1 not set]
+(.venv) PS> & "$e1\env-b\Scripts\python.exe" -m pip show colorama
+& : The term '\env-b\Scripts\python.exe' is not recognized as the name of a cmdlet, function, script file, or operable program.
+(.venv) PS> $e1 = "$env:TEMP\p0u02-e1"
+(.venv) PS> & "$e1\env-b\Scripts\python.exe" -m pip show colorama
+WARNING: Package(s) not found: colorama
+(.venv) PS> & "$e1\env-a\Scripts\python.exe" -m pip show colorama
+Name: colorama
+Version: 0.4.6
+Location: C:\Users\<USER~1>\AppData\Local\Temp\p0u02-e1\env-a\Lib\site-packages
+(.venv) PS> & "$e1\env-b\Scripts\python.exe" -m pip install colorama
+Successfully installed colorama-0.4.6
+(.venv) PS> & "$e1\env-b\Scripts\python.exe" -c "import colorama; print('import ok')"
+import ok
+
+=== Part E2: terminal works, notebook fails ===
+(.venv) PS> python -c "import nest_asyncio2, sys; print('import ok'); print(sys.executable)"
+import ok
+C:\Ormedian_Medical_ReliableAI\.venv\Scripts\python.exe
+[kernel_check.ipynb, kernel switched to Python 3.10]
+c:\Users\<user>\AppData\Local\Programs\Python\Python310\python.exe
+ModuleNotFoundError                       Traceback (most recent call last)
+----> 3 import nest_asyncio2
+ModuleNotFoundError: No module named 'nest_asyncio2'
+[kernel switched back to .venv; same cell rerun]
+c:\Ormedian_Medical_ReliableAI\.venv\Scripts\python.exe
+
+=== Part F: reproducibility evidence ===
+(.venv) PS> git rev-parse HEAD
+8e5a7d4d52bdbd8b9f47edd4b25998a43e2d1c7e
+(.venv) PS> python -c "import platform,sys; print(platform.platform()); print(sys.version); print(sys.executable)"
+Windows-10-10.0.19044-SP0
+3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+C:\Ormedian_Medical_ReliableAI\.venv\Scripts\python.exe
+(.venv) PS> python -m pip check
+No broken requirements found.
+(.venv) PS> python -m pip freeze
+(28 packages; see environment_report.md. The pasted copy omitted the pyzmq==27.2.0 line, which a direct read of .venv confirms.)
+
+=== Cleanup ===
+(.venv) PS> Remove-Item -Recurse -Force "$env:TEMP\p0u02-e1"
+[kernel_check.ipynb deleted; contained local paths and was never committed]
